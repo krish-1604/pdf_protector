@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Protect PDF</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    .form-container {
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    h2 {
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #333;
+    }
+    input[type="file"],
+    input[type="password"],
+    input[type="text"],
+    button {
+      display: block;
+      width: 100%;
+      padding: 0.7rem;
+      margin: 0.6rem 0 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #0070f3;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #0057c2;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Protect Your PDF</h2>
+    <form action="http://localhost:8000/protect-pdf" method="POST" enctype="multipart/form-data">
+      <label>Select PDF:</label>
+      <input type="file" name="file" accept="application/pdf" required />
+
+      <label>Set Password:</label>
+      <input type="password" name="password" placeholder="Enter password" required />
+
+      <label>Output File Name:</label>
+      <input type="text" name="filename" placeholder="my-protected-pdf" required />
+
+      <button type="submit">Protect PDF</button>
+    </form>
+  </div>
+</body>
+</html>

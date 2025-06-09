@@ -1,0 +1,31 @@
+# Node.js dependencies
+/node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# Uploaded files folder (dynamic, don't push uploads)
+uploads/
+
+# Python cache and virtual environment
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Mac OS files
+.DS_Store
+
+# Optional: if you use IDEs
+.vscode/
+.idea/
